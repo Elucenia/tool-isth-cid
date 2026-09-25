@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+    "input": {
+      "plaq": "1",
+      "dd": "2",
+      "tp": "0",
+      "fib": "0"
+    },
+    "expected": {
+      "score": 3,
+      "level": "mid"
+    },
+    "originalInput": {
+      "plaq": "1",
+      "dd": "2",
+      "tp": "0",
+      "fib": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+    "input": {
+      "plaq": "2",
+      "dd": "2",
+      "tp": "1",
+      "fib": "0"
+    },
+    "expected": {
+      "score": 5,
+      "level": "high"
+    },
+    "originalInput": {
+      "plaq": "2",
+      "dd": "2",
+      "tp": "1",
+      "fib": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Todos alterados ao máximo: 8 pontos",
+    "input": {
+      "plaq": "2",
+      "dd": "3",
+      "tp": "2",
+      "fib": "1"
+    },
+    "expected": {
+      "score": 8,
+      "level": "high"
+    },
+    "originalInput": {
+      "plaq": "2",
+      "dd": "3",
+      "tp": "2",
+      "fib": "1"
+    },
+    "expandedZeroOptions": []
+  }
+]

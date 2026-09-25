@@ -1,0 +1,231 @@
+{
+  "tool": {
+    "id": "isth-cid",
+    "title": "Escore ISTH de CID manifesta",
+    "short": "Coagulação intravascular disseminada (ISTH)",
+    "desc": "Escore da ISTH para coagulação intravascular disseminada (CID) manifesta: plaquetas, D-dímero, tempo de protrombina e fibrinogênio; 5 ou mais é compatível.",
+    "lead": "Diagnostica a coagulação intravascular disseminada manifesta com exames simples, em pacientes com doença de base que sabidamente causa CID.",
+    "spec": [
+      "hematologia-e-hemoterapia",
+      "medicina-intensiva",
+      "medicina-laboratorial",
+      "ginecologia-e-obstetricia"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "plaq",
+        "Plaquetas",
+        "radio",
+        {
+          "opts": {
+            "0": "&gt; 100.000/µL",
+            "1": "50.000 a 100.000/µL",
+            "2": "&lt; 50.000/µL"
+          }
+        }
+      ],
+      [
+        "dd",
+        "Marcador de fibrina (D-dímero ou PDF)",
+        "radio",
+        {
+          "opts": {
+            "0": "Sem aumento",
+            "2": "Aumento moderado",
+            "3": "Aumento acentuado"
+          }
+        }
+      ],
+      [
+        "tp",
+        "Prolongamento do tempo de protrombina",
+        "radio",
+        {
+          "opts": {
+            "0": "&lt; 3 s",
+            "1": "3 a 6 s",
+            "2": "&gt; 6 s"
+          }
+        }
+      ],
+      [
+        "fib",
+        "Fibrinogênio",
+        "radio",
+        {
+          "opts": {
+            "0": "&gt; 1 g/L (100 mg/dL)",
+            "1": "&lt; 1 g/L (100 mg/dL)"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "Escore ISTH",
+      "unit": "de 8",
+      "bands": [
+        [
+          0,
+          "mid",
+          "Não compatível com CID manifesta (&lt; 5)",
+          "Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias."
+        ],
+        [
+          5,
+          "high",
+          "Compatível com CID manifesta (≥ 5)",
+          "Tratar a causa de base; repetir o escore diariamente."
+        ]
+      ]
+    },
+    "formula": "<p>Plaquetas &gt; 100 mil 0, 50–100 mil 1, &lt; 50 mil 2 · D-dímero/PDF sem aumento 0, moderado 2, acentuado 3 · TP prolongado &lt; 3 s 0, 3–6 s 1, &gt; 6 s 2 · fibrinogênio &gt; 1 g/L 0, &lt; 1 g/L 1. Máximo: 8.</p><p>Pré-requisito: doença de base associada a CID (sepse, trauma, câncer, complicação obstétrica etc.).</p>",
+    "table": [
+      [
+        "Pontos",
+        "Interpretação",
+        "Conduta"
+      ],
+      [
+        "&lt; 5",
+        "Sugestivo de CID não manifesta",
+        "Repetir em 1 a 2 dias"
+      ],
+      [
+        "≥ 5",
+        "Compatível com CID manifesta",
+        "Repetir diariamente; tratar a causa"
+      ]
+    ],
+    "table_note": "Os limites de aumento \"moderado\" e \"acentuado\" do D-dímero não foram fixados pela ISTH: dependem do ensaio e devem ser definidos por cada laboratório.",
+    "tips": [
+      "Sem doença de base compatível, não aplique o escore: plaquetopenia e D-dímero alto têm muitas outras causas.",
+      "A tendência importa mais que um valor isolado: queda progressiva de plaquetas e fibrinogênio sugere CID em evolução mesmo com escore abaixo de 5.",
+      "Fibrinogênio é proteína de fase aguda: na sepse ele pode estar normal apesar de CID, e por isso vale só 1 ponto.",
+      "Na sepse, o escore SIC (sepsis-induced coagulopathy) identifica a coagulopatia mais cedo que o ISTH de CID manifesta.",
+      "Plasma, crioprecipitado e plaquetas são para sangramento ou procedimento invasivo, não para corrigir números."
+    ],
+    "sources": [
+      [
+        "Taylor FB Jr et al. Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost, 2001.",
+        "https://doi.org/10.1055/s-0037-1616068"
+      ],
+      [
+        "Levi M et al. Guidelines for the diagnosis and management of disseminated intravascular coagulation. Br J Haematol, 2009.",
+        "https://doi.org/10.1111/j.1365-2141.2009.07600.x"
+      ]
+    ],
+    "cases": [
+      [
+        "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        {
+          "plaq": "1",
+          "dd": "2",
+          "tp": "0",
+          "fib": "0"
+        },
+        {
+          "score": 3,
+          "level": "mid"
+        }
+      ],
+      [
+        "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        {
+          "plaq": "2",
+          "dd": "2",
+          "tp": "1",
+          "fib": "0"
+        },
+        {
+          "score": 5,
+          "level": "high"
+        }
+      ],
+      [
+        "Todos alterados ao máximo: 8 pontos",
+        {
+          "plaq": "2",
+          "dd": "3",
+          "tp": "2",
+          "fib": "1"
+        },
+        {
+          "score": 8,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "onco-diagnostico",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 8",
+      "label": "Escore ISTH",
+      "fields": [
+        [
+          "plaq",
+          "radio",
+          0
+        ],
+        [
+          "dd",
+          "radio",
+          0
+        ],
+        [
+          "tp",
+          "radio",
+          0
+        ],
+        [
+          "fib",
+          "radio",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "mid",
+          "Não compatível com CID manifesta (&lt; 5)",
+          "Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias."
+        ],
+        [
+          5,
+          "high",
+          "Compatível com CID manifesta (≥ 5)",
+          "Tratar a causa de base; repetir o escore diariamente."
+        ]
+      ]
+    },
+    "areaId": "onco-diagnostico",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/onco-diagnostico.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/onco-diagnostico.php",
+    "sha256": "29e7fd6aab1f8bf937a34267255855c21f804696da2b4817d6197578cdcbe743",
+    "bytes": 78570
+  },
+  "clinicalValidation": "not-performed"
+}
