@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-isth-cid · Elucenia · https://github.com/Elucenia/tool-isth-cid
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"isth-cid","title":"Escore ISTH de CID manifesta","fields":[["plaq","Plaquetas","radio",{"opts":{"0":"&gt; 100.000/µL","1":"50.000 a 100.000/µL","2":"&lt; 50.000/µL"}}],["dd","Marcador de fibrina (D-dímero ou PDF)","radio",{"opts":{"0":"Sem aumento","2":"Aumento moderado","3":"Aumento acentuado"}}],["tp","Prolongamento do tempo de protrombina","radio",{"opts":{"0":"&lt; 3 s","1":"3 a 6 s","2":"&gt; 6 s"}}],["fib","Fibrinogênio","radio",{"opts":{"0":"&gt; 1 g/L (100 mg/dL)","1":"&lt; 1 g/L (100 mg/dL)"}}]],"config":{"unit":"de 8","label":"Escore ISTH","fields":[["plaq","radio",0],["dd","radio",0],["tp","radio",0],["fib","radio",0]],"bands":[[0,"mid","Não compatível com CID manifesta (&lt; 5)","Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias."],[5,"high","Compatível com CID manifesta (≥ 5)","Tratar a causa de base; repetir o escore diariamente."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
