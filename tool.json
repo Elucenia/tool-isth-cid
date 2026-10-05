@@ -5,13 +5,13 @@
     "short": "Coagulação intravascular disseminada (ISTH)",
     "desc": "Escore da ISTH para coagulação intravascular disseminada (CID) manifesta: plaquetas, D-dímero, tempo de protrombina e fibrinogênio; 5 ou mais é compatível.",
     "lead": "Diagnostica a coagulação intravascular disseminada manifesta com exames simples, em pacientes com doença de base que sabidamente causa CID.",
+    "kind": "Escore",
     "spec": [
       "hematologia-e-hemoterapia",
       "medicina-intensiva",
       "medicina-laboratorial",
       "ginecologia-e-obstetricia"
     ],
-    "tier": 1,
     "fields": [
       [
         "plaq",
@@ -55,56 +55,13 @@
         "radio",
         {
           "opts": {
-            "0": "&gt; 1 g/L (100 mg/dL)",
+            "0": "≥ 1 g/L",
             "1": "&lt; 1 g/L (100 mg/dL)"
           }
         }
       ]
     ],
-    "score": {
-      "label": "Escore ISTH",
-      "unit": "de 8",
-      "bands": [
-        [
-          0,
-          "mid",
-          "Não compatível com CID manifesta (&lt; 5)",
-          "Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias."
-        ],
-        [
-          5,
-          "high",
-          "Compatível com CID manifesta (≥ 5)",
-          "Tratar a causa de base; repetir o escore diariamente."
-        ]
-      ]
-    },
-    "formula": "<p>Plaquetas &gt; 100 mil 0, 50–100 mil 1, &lt; 50 mil 2 · D-dímero/PDF sem aumento 0, moderado 2, acentuado 3 · TP prolongado &lt; 3 s 0, 3–6 s 1, &gt; 6 s 2 · fibrinogênio &gt; 1 g/L 0, &lt; 1 g/L 1. Máximo: 8.</p><p>Pré-requisito: doença de base associada a CID (sepse, trauma, câncer, complicação obstétrica etc.).</p>",
-    "table": [
-      [
-        "Pontos",
-        "Interpretação",
-        "Conduta"
-      ],
-      [
-        "&lt; 5",
-        "Sugestivo de CID não manifesta",
-        "Repetir em 1 a 2 dias"
-      ],
-      [
-        "≥ 5",
-        "Compatível com CID manifesta",
-        "Repetir diariamente; tratar a causa"
-      ]
-    ],
-    "table_note": "Os limites de aumento \"moderado\" e \"acentuado\" do D-dímero não foram fixados pela ISTH: dependem do ensaio e devem ser definidos por cada laboratório.",
-    "tips": [
-      "Sem doença de base compatível, não aplique o escore: plaquetopenia e D-dímero alto têm muitas outras causas.",
-      "A tendência importa mais que um valor isolado: queda progressiva de plaquetas e fibrinogênio sugere CID em evolução mesmo com escore abaixo de 5.",
-      "Fibrinogênio é proteína de fase aguda: na sepse ele pode estar normal apesar de CID, e por isso vale só 1 ponto.",
-      "Na sepse, o escore SIC (sepsis-induced coagulopathy) identifica a coagulopatia mais cedo que o ISTH de CID manifesta.",
-      "Plasma, crioprecipitado e plaquetas são para sangramento ou procedimento invasivo, não para corrigir números."
-    ],
+    "formula": "<p>Plaquetas &gt; 100 mil 0, 50–100 mil 1, &lt; 50 mil 2 · D-dímero/PDF sem aumento 0, moderado 2, acentuado 3 · TP prolongado &lt; 3 s 0, 3–6 s 1, &gt; 6 s 2 · fibrinogênio ≥ 1 g/L 0, &lt; 1 g/L 1. Máximo: 8.</p><p>Pré-requisito: doença de base associada a CID (sepse, trauma, câncer, complicação obstétrica etc.).</p>",
     "sources": [
       [
         "Taylor FB Jr et al. Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost, 2001.",
@@ -113,6 +70,10 @@
       [
         "Levi M et al. Guidelines for the diagnosis and management of disseminated intravascular coagulation. Br J Haematol, 2009.",
         "https://doi.org/10.1111/j.1365-2141.2009.07600.x"
+      ],
+      [
+        "Larsen JB et al. Disseminated intravascular coagulation diagnosis: Positive predictive value of the ISTH score in a Danish population. Research and Practice in Thrombosis and Haemostasis, 2021. Table 1 (fibrinogen boundary).",
+        "https://doi.org/10.1002/rth2.12636"
       ]
     ],
     "cases": [
@@ -156,48 +117,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 8",
-      "label": "Escore ISTH",
-      "fields": [
-        [
-          "plaq",
-          "radio",
-          0
-        ],
-        [
-          "dd",
-          "radio",
-          0
-        ],
-        [
-          "tp",
-          "radio",
-          0
-        ],
-        [
-          "fib",
-          "radio",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "mid",
-          "Não compatível com CID manifesta (&lt; 5)",
-          "Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias."
-        ],
-        [
-          5,
-          "high",
-          "Compatível com CID manifesta (≥ 5)",
-          "Tratar a causa de base; repetir o escore diariamente."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -206,17 +125,667 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T19:21:17.238Z",
+      "total": 54,
+      "passed": 54,
+      "sourceRowCount": 54,
+      "uniqueApiInputCount": 54,
+      "sourceContextCount": 54,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "646cd5e97787066b13c14d501504ee77db8a88e62498bc87486f04b75ec9b866",
+        "total": 54,
+        "bankRowCount": 54,
+        "uniqueApiInputCount": 54,
+        "sourceContextCount": 54,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+            "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+          },
+          {
+            "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+            "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+          "sha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a"
+        },
+        "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 54,
+        "uniqueApiInputs": 54,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+          "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+        }
+      },
+      "scope": "All54 combinations of four already selected source point-code domains, exact integer score only. No raw laboratory boundary classification, diagnosis threshold, clinical prerequisite gate, nonovert/SIC variant or dynamic course is validated.",
+      "sources": [
+        {
+          "primaryObservations": {
+            "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+            "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+          },
+          "id": "isth-cid",
+          "sources": [
+            {
+              "doi": "10.1055/s-0037-1616068",
+              "url": "https://www.thebloodproject.com/wp-content/uploads/2021/10/Original_DIC_ISTH.pdf",
+              "access": "Original four-page2001 publisher-page PDF reprint downloaded from public mirror for read-only inspection; publisher endpoint not substituted as an access claim.",
+              "artifact": "villalta-mess-isth-primary-final27/taylor2001-original.pdf",
+              "sha256": "fe749c0d1c864fcd5c0efc6a4f2e297f1dfd0339dc31004f64f3cef705eacdb2",
+              "readScope": "Visual Table2 at PDFpage2/printed1328, extracted CriteriaforOvertDIC paragraph on page3/1329 and Table1 prerequisite. Poppler had two displayfont substitution warnings; Table2 raster remained inspectable. Not complete expanded17reference/three-table ISTH online manuscript."
+            },
+            {
+              "doi": "10.1002/rth2.12636",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8660681/",
+              "access": "Indexed primary study Table1 returned through search with complete displayed rows; subsequent direct PMC open hit recaptcha and Wiley routes returned internal errors. Direct full text reading not claimed.",
+              "readScope": "Indexed Table1 only: fibrinogen>=1g/L zero and platelet50–100 point1. This study uses INR and locally defined D-dimer categories, not the platform PT-second groups."
+            },
+            {
+              "doi": "10.1016/j.jtha.2025.03.038",
+              "url": "https://pure.amsterdamumc.nl/ws/files/149072767/Updated-definition-and-scoring-of-disseminated-intravascular-coagulation-in-2025.pdf",
+              "access": "Official author-institution publisher-version PDF accessible directly.",
+              "readScope": "Title/license/edition page, Table1 and section4 cutoff proposal. Revised2025 framework is recorded as distinct, not adopted into2001 categorical implementation."
+            }
+          ],
+          "pointContract": {
+            "plateletCodes": [
+              0,
+              1,
+              2
+            ],
+            "fibrinMarkerCodes": [
+              0,
+              2,
+              3
+            ],
+            "prolongedPTCodes": [
+              0,
+              1,
+              2
+            ],
+            "fibrinogenCodes": [
+              0,
+              1
+            ],
+            "sum": [
+              0,
+              8
+            ],
+            "original2001TableLiteralBands": {
+              "platelets": [
+                ">100→0",
+                "<100→1",
+                "<50→2"
+              ],
+              "PTseconds": [
+                "<3→0",
+                ">3 and <6→1",
+                ">6→2"
+              ],
+              "fibrinogenGramPerLitre": [
+                ">1→0",
+                "<1→1"
+              ]
+            },
+            "categoricalWeightScope": "Selected point codes only; exact100platelet,3/6second and1g/L boundary inclusivity is not established by this2001 printed table. Current form uses50–100,3–6 and>=1g/L; later support for some boundaries is distinct source evidence, not full2001 conformity.",
+            "later2025": "Table1 explicitly uses>=50,<100 for platelet1 and>=3,<6 for PT1,>=6 for PT2; section4 proposes D-dimer>3×ULN for2 and>7×ULN for3. Do not silently substitute2025 or infer universal assay thresholds."
+          },
+          "scope": "All54 combinations of four already selected source point-code domains, exact integer score only. No raw laboratory boundary classification, diagnosis threshold, clinical prerequisite gate, nonovert/SIC variant or dynamic course is validated.",
+          "limitations": "OriginalTable2 has ambiguous equalities and overlapping platelet shorthand. Moderate/strong fibrin increase requires assay-specific definitions in the original text. Underlying disease compatible with overtDIC is a prerequisite, not a numeric score component.2025revision and2021INR/localD-dimer study are distinct; numerical summation does not approve any diagnoses, interpretation or treatment."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+      "evidenceSha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a",
+      "independentPeer": {
+        "status": "passed-scoped-numeric",
+        "evidence": {
+          "file": "reports/review-20261003/villalta-mess-isth-independent-peer-verify-final27.json",
+          "sha256": "ff8bc18b4b06912aac258ce96b6c33cacbe5a1d484b58e52cc9d6679ad462028"
+        },
+        "scope": "Independently read selected primary tables, own frozen source-point expectations and three adapters Node/isolatedChromium. Source scope partial; local MESS72 zero cases separated; no clinical/rights/full-method approval."
+      },
+      "freshAdapterExecutions": 162,
+      "freshVmExecutions": 162,
+      "actualBrowserEvidenceScope": "Original isolated actual Chromium, each of the three exactly bound adapters, source-only rows. Separate local MESS72 extension is not part of this source bank.",
+      "implementations": [
+        {
+          "id": "isth-cid",
+          "app": "website",
+          "file": "apps/website/private/tool-code/isth-cid/calculator.js",
+          "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+        },
+        {
+          "id": "isth-cid",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/isth-cid/calculator.js",
+          "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+        },
+        {
+          "id": "isth-cid",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/isth-cid/calculator.js",
+          "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+        }
+      ],
+      "qualifications": [
+        "OriginalTable2 has ambiguous equalities and overlapping platelet shorthand. Moderate/strong fibrin increase requires assay-specific definitions in the original text. Underlying disease compatible with overtDIC is a prerequisite, not a numeric score component.2025revision and2021INR/localD-dimer study are distinct; numerical summation does not approve any diagnoses, interpretation or treatment.",
+        "MESS source bank excludes all72 local zero-ischemia examples. Those remain in the untouched original platform-extension receipt and are not counted as source conformity.",
+        "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+        "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+        "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+        "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "metadataPackagingPeer": {
+        "status": "passed",
+        "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+        "peer": {
+          "file": "reports/review-20261003/villalta-mess-isth-bank-metadata-independent-review-western-final27.json",
+          "sha256": "8254f049e2cde19930dae4e5ef3b689175daa3a083b9a8a056d3650abcf8f1c5"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "prospectiveSource27Bindings": [
+        {
+          "file": "apps/website/private/tool-code/isth-cid/calculator.js",
+          "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/isth-cid/calculator.js",
+          "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+        },
+        {
+          "file": "apps/command-center/private/tool-code/isth-cid/calculator.js",
+          "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+        }
+      ],
+      "prospectiveSource27Replay": {
+        "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+        "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "ISTH/Taylor 2001:CIDmanifesta, plaquetas/PDF/TP/fibrinogênio, total 0–8",
+    "implementationVersion": "isth-cid@native-2026-10-04+5cb9bd005f09",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/11816725/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Plaquetas > 100 mil 0, 50–100 mil 1, < 50 mil 2 · D-dímero/PDF sem aumento 0, moderado 2, acentuado 3 · TP prolongado < 3 s 0, 3–6 s 1, > 6 s 2 · fibrinogênio ≥ 1 g/L 0, < 1 g/L 1. Máximo: 8. Pré-requisito: doença de base associada a CID (sepse, trauma, câncer, complicação obstétrica etc.).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "plaq",
+            "label": "Plaquetas",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&gt; 100.000/µL",
+              "1": "50.000 a 100.000/µL",
+              "2": "&lt; 50.000/µL"
+            }
+          },
+          {
+            "key": "dd",
+            "label": "Marcador de fibrina (D-dímero ou PDF)",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Sem aumento",
+              "2": "Aumento moderado",
+              "3": "Aumento acentuado"
+            }
+          },
+          {
+            "key": "tp",
+            "label": "Prolongamento do tempo de protrombina",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&lt; 3 s",
+              "1": "3 a 6 s",
+              "2": "&gt; 6 s"
+            }
+          },
+          {
+            "key": "fib",
+            "label": "Fibrinogênio",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≥ 1 g/L",
+              "1": "&lt; 1 g/L (100 mg/dL)"
+            }
+          }
+        ],
+        "hash": "2e73b5ffb743fb01bfd8373199483c5b18a88444a89f708c1402ec0ffe7b602d"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Taylor FB Jr et al. Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost, 2001.",
+          "url": "https://doi.org/10.1055/s-0037-1616068",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation.",
+            "year": "2001",
+            "firstPublicationDate": "2001-11-01",
+            "doi": "10.1055/s-0037-1616068",
+            "pmid": "11816725",
+            "journal": "Thrombosis and haemostasis",
+            "authors": "Taylor FB, Toh CH, Hoots WK, Wada H, Levi M, Scientific Subcommittee on Disseminated Intravascular Coagulation (DIC) of the International Society on Thrombosis and Haemostasis (ISTH)."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/11816725/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Levi M et al. Guidelines for the diagnosis and management of disseminated intravascular coagulation. Br J Haematol, 2009.",
+          "url": "https://doi.org/10.1111/j.1365-2141.2009.07600.x",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Guidelines for the diagnosis and management of disseminated intravascular coagulation. British Committee for Standards in Haematology.",
+            "year": "2009",
+            "firstPublicationDate": "2009-02-12",
+            "doi": "10.1111/j.1365-2141.2009.07600.x",
+            "pmid": "19222477",
+            "journal": "British journal of haematology",
+            "authors": "Levi M, Toh CH, Thachil J, Watson HG."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/19222477/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "07de8b0b04283824ba4e1747b5d04beaa5000d66b85c4da5cb63b28c86eecaea",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T19:21:17.238Z",
+        "total": 54,
+        "passed": 54,
+        "sourceRowCount": 54,
+        "uniqueApiInputCount": 54,
+        "sourceContextCount": 54,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "646cd5e97787066b13c14d501504ee77db8a88e62498bc87486f04b75ec9b866",
+          "total": 54,
+          "bankRowCount": 54,
+          "uniqueApiInputCount": 54,
+          "sourceContextCount": 54,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+              "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+            },
+            {
+              "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+              "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+            "sha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a"
+          },
+          "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 54,
+          "uniqueApiInputs": 54,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+            "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+          }
+        },
+        "scope": "All54 combinations of four already selected source point-code domains, exact integer score only. No raw laboratory boundary classification, diagnosis threshold, clinical prerequisite gate, nonovert/SIC variant or dynamic course is validated.",
+        "sources": [
+          {
+            "primaryObservations": {
+              "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+              "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+            },
+            "id": "isth-cid",
+            "sources": [
+              {
+                "doi": "10.1055/s-0037-1616068",
+                "url": "https://www.thebloodproject.com/wp-content/uploads/2021/10/Original_DIC_ISTH.pdf",
+                "access": "Original four-page2001 publisher-page PDF reprint downloaded from public mirror for read-only inspection; publisher endpoint not substituted as an access claim.",
+                "artifact": "villalta-mess-isth-primary-final27/taylor2001-original.pdf",
+                "sha256": "fe749c0d1c864fcd5c0efc6a4f2e297f1dfd0339dc31004f64f3cef705eacdb2",
+                "readScope": "Visual Table2 at PDFpage2/printed1328, extracted CriteriaforOvertDIC paragraph on page3/1329 and Table1 prerequisite. Poppler had two displayfont substitution warnings; Table2 raster remained inspectable. Not complete expanded17reference/three-table ISTH online manuscript."
+              },
+              {
+                "doi": "10.1002/rth2.12636",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8660681/",
+                "access": "Indexed primary study Table1 returned through search with complete displayed rows; subsequent direct PMC open hit recaptcha and Wiley routes returned internal errors. Direct full text reading not claimed.",
+                "readScope": "Indexed Table1 only: fibrinogen>=1g/L zero and platelet50–100 point1. This study uses INR and locally defined D-dimer categories, not the platform PT-second groups."
+              },
+              {
+                "doi": "10.1016/j.jtha.2025.03.038",
+                "url": "https://pure.amsterdamumc.nl/ws/files/149072767/Updated-definition-and-scoring-of-disseminated-intravascular-coagulation-in-2025.pdf",
+                "access": "Official author-institution publisher-version PDF accessible directly.",
+                "readScope": "Title/license/edition page, Table1 and section4 cutoff proposal. Revised2025 framework is recorded as distinct, not adopted into2001 categorical implementation."
+              }
+            ],
+            "pointContract": {
+              "plateletCodes": [
+                0,
+                1,
+                2
+              ],
+              "fibrinMarkerCodes": [
+                0,
+                2,
+                3
+              ],
+              "prolongedPTCodes": [
+                0,
+                1,
+                2
+              ],
+              "fibrinogenCodes": [
+                0,
+                1
+              ],
+              "sum": [
+                0,
+                8
+              ],
+              "original2001TableLiteralBands": {
+                "platelets": [
+                  ">100→0",
+                  "<100→1",
+                  "<50→2"
+                ],
+                "PTseconds": [
+                  "<3→0",
+                  ">3 and <6→1",
+                  ">6→2"
+                ],
+                "fibrinogenGramPerLitre": [
+                  ">1→0",
+                  "<1→1"
+                ]
+              },
+              "categoricalWeightScope": "Selected point codes only; exact100platelet,3/6second and1g/L boundary inclusivity is not established by this2001 printed table. Current form uses50–100,3–6 and>=1g/L; later support for some boundaries is distinct source evidence, not full2001 conformity.",
+              "later2025": "Table1 explicitly uses>=50,<100 for platelet1 and>=3,<6 for PT1,>=6 for PT2; section4 proposes D-dimer>3×ULN for2 and>7×ULN for3. Do not silently substitute2025 or infer universal assay thresholds."
+            },
+            "scope": "All54 combinations of four already selected source point-code domains, exact integer score only. No raw laboratory boundary classification, diagnosis threshold, clinical prerequisite gate, nonovert/SIC variant or dynamic course is validated.",
+            "limitations": "OriginalTable2 has ambiguous equalities and overlapping platelet shorthand. Moderate/strong fibrin increase requires assay-specific definitions in the original text. Underlying disease compatible with overtDIC is a prerequisite, not a numeric score component.2025revision and2021INR/localD-dimer study are distinct; numerical summation does not approve any diagnoses, interpretation or treatment."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+        "evidenceSha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a",
+        "independentPeer": {
+          "status": "passed-scoped-numeric",
+          "evidence": {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-peer-verify-final27.json",
+            "sha256": "ff8bc18b4b06912aac258ce96b6c33cacbe5a1d484b58e52cc9d6679ad462028"
+          },
+          "scope": "Independently read selected primary tables, own frozen source-point expectations and three adapters Node/isolatedChromium. Source scope partial; local MESS72 zero cases separated; no clinical/rights/full-method approval."
+        },
+        "freshAdapterExecutions": 162,
+        "freshVmExecutions": 162,
+        "actualBrowserEvidenceScope": "Original isolated actual Chromium, each of the three exactly bound adapters, source-only rows. Separate local MESS72 extension is not part of this source bank.",
+        "implementations": [
+          {
+            "id": "isth-cid",
+            "app": "website",
+            "file": "apps/website/private/tool-code/isth-cid/calculator.js",
+            "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+          },
+          {
+            "id": "isth-cid",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/isth-cid/calculator.js",
+            "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+          },
+          {
+            "id": "isth-cid",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/isth-cid/calculator.js",
+            "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+          }
+        ],
+        "qualifications": [
+          "OriginalTable2 has ambiguous equalities and overlapping platelet shorthand. Moderate/strong fibrin increase requires assay-specific definitions in the original text. Underlying disease compatible with overtDIC is a prerequisite, not a numeric score component.2025revision and2021INR/localD-dimer study are distinct; numerical summation does not approve any diagnoses, interpretation or treatment.",
+          "MESS source bank excludes all72 local zero-ischemia examples. Those remain in the untouched original platform-extension receipt and are not counted as source conformity.",
+          "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+          "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+          "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+          "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "metadataPackagingPeer": {
+          "status": "passed",
+          "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+          "peer": {
+            "file": "reports/review-20261003/villalta-mess-isth-bank-metadata-independent-review-western-final27.json",
+            "sha256": "8254f049e2cde19930dae4e5ef3b689175daa3a083b9a8a056d3650abcf8f1c5"
+          },
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "prospectiveSource27Bindings": [
+          {
+            "file": "apps/website/private/tool-code/isth-cid/calculator.js",
+            "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/isth-cid/calculator.js",
+            "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+          },
+          {
+            "file": "apps/command-center/private/tool-code/isth-cid/calculator.js",
+            "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+          }
+        ],
+        "prospectiveSource27Replay": {
+          "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+          "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25",
+      "previousImplementationHash": "c39aa2b4625d9da1def6d9b988f56f93a0a34aec2db1c02e5b43f0873a98924f",
+      "previousInputContract": {
+        "fields": [
+          {
+            "key": "plaq",
+            "label": "Plaquetas",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&gt; 100.000/µL",
+              "1": "50.000 a 100.000/µL",
+              "2": "&lt; 50.000/µL"
+            }
+          },
+          {
+            "key": "dd",
+            "label": "Marcador de fibrina (D-dímero ou PDF)",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Sem aumento",
+              "2": "Aumento moderado",
+              "3": "Aumento acentuado"
+            }
+          },
+          {
+            "key": "tp",
+            "label": "Prolongamento do tempo de protrombina",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&lt; 3 s",
+              "1": "3 a 6 s",
+              "2": "&gt; 6 s"
+            }
+          },
+          {
+            "key": "fib",
+            "label": "Fibrinogênio",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&gt; 1 g/L (100 mg/dL)",
+              "1": "&lt; 1 g/L (100 mg/dL)"
+            }
+          }
+        ],
+        "hash": "516b7269846e9493e15a2d5cb16fdc3ef5cac1fd949ba274aeb837b1afb8d9c6"
+      },
+      "metadataAmendment": {
+        "file": "reports/review-20261003/adapter-metadata-label-corrections.json",
+        "scope": "Current option labels, same numeric option keys and unchanged calculation text; no formula-conformance or clinical approval inferred",
+        "calculationTextSha256": "e3bdcbc7483dfbca9f2eea6a751a482023bb5db15956cadd3349491ea1bc83f6"
+      },
+      "previousImplementedVariant": "Plaquetas > 100 mil 0, 50–100 mil 1, < 50 mil 2 · D-dímero/PDF sem aumento 0, moderado 2, acentuado 3 · TP prolongado < 3 s 0, 3–6 s 1, > 6 s 2 · fibrinogênio > 1 g/L 0, < 1 g/L 1. Máximo: 8. Pré-requisito: doença de base associada a CID (sepse, trauma, câncer, complicação obstétrica etc.).",
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-04T17:52:09.841Z",
+          "changes": [
+            "inputContract",
+            "implementationVersion"
+          ],
+          "priorImplementationVersion": "isth-cid@native-2026-10-03+c39aa2b4625d",
+          "priorImplementationHash": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25",
+          "priorInputContract": {
+            "fields": [
+              {
+                "key": "plaq",
+                "label": "Plaquetas",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "&gt; 100.000/µL",
+                  "1": "50.000 a 100.000/µL",
+                  "2": "&lt; 50.000/µL"
+                }
+              },
+              {
+                "key": "dd",
+                "label": "Marcador de fibrina (D-dímero ou PDF)",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Sem aumento",
+                  "2": "Aumento moderado",
+                  "3": "Aumento acentuado"
+                }
+              },
+              {
+                "key": "tp",
+                "label": "Prolongamento do tempo de protrombina",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "&lt; 3 s",
+                  "1": "3 a 6 s",
+                  "2": "&gt; 6 s"
+                }
+              },
+              {
+                "key": "fib",
+                "label": "Fibrinogênio",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "≥ 1 g/L",
+                  "1": "&lt; 1 g/L (100 mg/dL)"
+                }
+              }
+            ],
+            "hash": "4ef5267b402c103564aa351e58225665e359e2a9ecb8ced555039a3533a68c05"
+          },
+          "priorImplementedVariant": "Plaquetas > 100 mil 0, 50–100 mil 1, < 50 mil 2 · D-dímero/PDF sem aumento 0, moderado 2, acentuado 3 · TP prolongado < 3 s 0, 3–6 s 1, > 6 s 2 · fibrinogênio ≥ 1 g/L 0, < 1 g/L 1. Máximo: 8. Pré-requisito: doença de base associada a CID (sepse, trauma, câncer, complicação obstétrica etc.).",
+          "explicitMethodVersion": "ISTH/Taylor 2001:CIDmanifesta, plaquetas/PDF/TP/fibrinogênio, total 0–8",
+          "sourceEvidenceUnchanged": true,
+          "independentArithmeticUnchanged": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "scope": "Declarative technical rebinding only. Source access scope, source proofs and original failure/test histories remain unchanged."
+        }
+      ]
+    },
+    "limits": "Aplicar no contexto de doença de base compatível com CID, combinando dados clínicos e laboratoriais. O processo é dinâmico e requer repetição da avaliação. Um escore não comprova sozinho o diagnóstico; a precisão varia com a população e o estrato de pontuação.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.945Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Taylor 2001 sem resumo; os limites laboratoriais integrais não foram reconferidos neste lote.",
+        "A fonte Larsen Tabela 1 usada anteriormente pelo pai para fibrinogênio não foi reaberta por este leitor."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/isth-cid/calculator.js",
+    "bytes": 4849,
+    "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "f6cf279ef9bb9455d486bd821485f2991bc9fcacda035c8c507bec70080a9665",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "336cf0e1ffeaa927920bd9cbefb5b73868693d53b999676fcd2bb10178794fde",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "336cf0e1ffeaa927920bd9cbefb5b73868693d53b999676fcd2bb10178794fde",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

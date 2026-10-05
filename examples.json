@@ -1,6 +1,15 @@
 [
   {
-    "label": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+    "id": "isth-cid",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+    "originalInput": {
+      "plaq": "1",
+      "dd": "2",
+      "tp": "0",
+      "fib": "0"
+    },
     "input": {
       "plaq": "1",
       "dd": "2",
@@ -11,16 +20,36 @@
       "score": 3,
       "level": "mid"
     },
-    "originalInput": {
-      "plaq": "1",
-      "dd": "2",
-      "tp": "0",
-      "fib": "0"
+    "recordedResult": {
+      "main": [
+        "3",
+        "de 8"
+      ],
+      "label": "Escore ISTH",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+    "id": "isth-cid",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+    "originalInput": {
+      "plaq": "2",
+      "dd": "2",
+      "tp": "1",
+      "fib": "0"
+    },
     "input": {
       "plaq": "2",
       "dd": "2",
@@ -31,16 +60,36 @@
       "score": 5,
       "level": "high"
     },
-    "originalInput": {
-      "plaq": "2",
-      "dd": "2",
-      "tp": "1",
-      "fib": "0"
+    "recordedResult": {
+      "main": [
+        "5",
+        "de 8"
+      ],
+      "label": "Escore ISTH",
+      "raw": {
+        "score": 5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Todos alterados ao máximo: 8 pontos",
+    "id": "isth-cid",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Todos alterados ao máximo: 8 pontos",
+    "originalInput": {
+      "plaq": "2",
+      "dd": "3",
+      "tp": "2",
+      "fib": "1"
+    },
     "input": {
       "plaq": "2",
       "dd": "3",
@@ -51,12 +100,23 @@
       "score": 8,
       "level": "high"
     },
-    "originalInput": {
-      "plaq": "2",
-      "dd": "3",
-      "tp": "2",
-      "fib": "1"
+    "recordedResult": {
+      "main": [
+        "8",
+        "de 8"
+      ],
+      "label": "Escore ISTH",
+      "raw": {
+        "score": 8
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
