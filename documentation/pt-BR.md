@@ -88,3 +88,28 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Não compatível com CID manifesta (< 5)
+
+Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias.
+
+
+### 2
+
+Compatível com CID manifesta (≥ 5)
+
+Tratar a causa de base; repetir o escore diariamente.
+
+
+### 3
+
+Compatível com CID manifesta (≥ 5)
+
+Tratar a causa de base; repetir o escore diariamente.
+

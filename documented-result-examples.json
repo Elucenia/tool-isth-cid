@@ -1,0 +1,537 @@
+{
+  "id": "isth-cid",
+  "implementationVersion": "isth-cid@native-2026-10-05+7b2cc692fc33",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Não compatível com CID manifesta (< 5)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Sugere, mas não afasta, CID não manifesta: repetir em 1 a 2 dias.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatível com CID manifesta (≥ 5)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Tratar a causa de base; repetir o escore diariamente.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatível com CID manifesta (≥ 5)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Tratar a causa de base; repetir o escore diariamente.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Not compatible with overt DIC (< 5)",
+            "locale": "en",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "Suggests, but does not rule out, non-overt DIC: repeat in 1 to 2 days.",
+            "locale": "en",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatible with overt DIC (≥ 5)",
+            "locale": "en",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Treat the underlying cause; repeat the score daily.",
+            "locale": "en",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatible with overt DIC (≥ 5)",
+            "locale": "en",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Treat the underlying cause; repeat the score daily.",
+            "locale": "en",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No compatible con CID manifiesta (< 5)",
+            "locale": "es",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "Sugiere, pero no descarta, CID no manifiesta: repetir en 1 a 2 días.",
+            "locale": "es",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatible con CID manifiesta (≥ 5)",
+            "locale": "es",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Tratar la causa de base; repetir el puntaje diariamente.",
+            "locale": "es",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatible con CID manifiesta (≥ 5)",
+            "locale": "es",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Tratar la causa de base; repetir el puntaje diariamente.",
+            "locale": "es",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Non compatible avec une CIVD manifeste (< 5)",
+            "locale": "fr",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "Évoque, sans exclure, une CIVD non manifeste : répéter dans 1 à 2 jours.",
+            "locale": "fr",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatible avec une CIVD manifeste (≥ 5)",
+            "locale": "fr",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Traiter la cause sous-jacente ; répéter le score quotidiennement.",
+            "locale": "fr",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatible avec une CIVD manifeste (≥ 5)",
+            "locale": "fr",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Traiter la cause sous-jacente ; répéter le score quotidiennement.",
+            "locale": "fr",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Nicht vereinbar mit manifester DIC (< 5)",
+            "locale": "de",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "Spricht für eine nicht manifeste DIC, schließt sie aber nicht aus: in 1 bis 2 Tagen wiederholen.",
+            "locale": "de",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Vereinbar mit manifester DIC (≥ 5)",
+            "locale": "de",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Die Grunderkrankung behandeln; den Score täglich wiederholen.",
+            "locale": "de",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Vereinbar mit manifester DIC (≥ 5)",
+            "locale": "de",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Die Grunderkrankung behandeln; den Score täglich wiederholen.",
+            "locale": "de",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Non compatibile con CID manifesta (< 5)",
+            "locale": "it",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "Suggerisce, ma non esclude, CID non manifesta: ripetere in 1 o 2 giorni.",
+            "locale": "it",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatibile con CID manifesta (≥ 5)",
+            "locale": "it",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Trattare la causa di base; ripetere il punteggio quotidianamente.",
+            "locale": "it",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Compatibile con CID manifesta (≥ 5)",
+            "locale": "it",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "Trattare la causa di base; ripetere il punteggio quotidianamente.",
+            "locale": "it",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "غير متوافق مع DIC الصريحة (< 5)",
+            "locale": "ar",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "يشير إلى DIC غير الصريحة، لكنه لا يستبعدها: يُعاد بعد 1 إلى 2 يومًا.",
+            "locale": "ar",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "متوافق مع DIC الصريحة (≥ 5)",
+            "locale": "ar",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "عالج السبب الأساسي؛ أعد حساب الدرجة يوميًا.",
+            "locale": "ar",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "متوافق مع DIC الصريحة (≥ 5)",
+            "locale": "ar",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "عالج السبب الأساسي؛ أعد حساب الدرجة يوميًا.",
+            "locale": "ar",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "与显性 DIC 不相符（< 5）",
+            "locale": "zh",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "提示，但不能排除非显性 DIC：于 1 到 2 天后复查。",
+            "locale": "zh",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "与显性 DIC 相符（≥ 5）",
+            "locale": "zh",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "治疗基础病因；每日重复评分。",
+            "locale": "zh",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "与显性 DIC 相符（≥ 5）",
+            "locale": "zh",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "治疗基础病因；每日重复评分。",
+            "locale": "zh",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "顕性DICとは整合しない（< 5）",
+            "locale": "ja",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "非顕性DICを示唆するが、除外はできない：1～2日後に再検する。",
+            "locale": "ja",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "顕性DICと整合する（≥ 5）",
+            "locale": "ja",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "基礎原因を治療し、スコアを毎日再評価する。",
+            "locale": "ja",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "顕性DICと整合する（≥ 5）",
+            "locale": "ja",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "基礎原因を治療し、スコアを毎日再評価する。",
+            "locale": "ja",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Plaquetas 80 mil, D-dímero moderado, TP +2 s, fibrinogênio normal: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्पष्ट DIC के अनुकूल नहीं (< 5)",
+            "locale": "hi",
+            "template": "documented-authored-de8daa6ac37aab57f813"
+          },
+          "note": {
+            "text": "ग़ैर-प्रकट DIC का सुझाव देता है, लेकिन उसे नकारता नहीं है: 1 से 2 दिन में दोहराएँ।",
+            "locale": "hi",
+            "template": "documented-authored-5fee5d0cb9a0367b5399"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Corte: plaquetas 40 mil, D-dímero moderado, TP +4 s: 5 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्पष्ट DIC के अनुकूल (≥ 5)",
+            "locale": "hi",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "मूल कारण का उपचार करें; स्कोर को प्रतिदिन दोहराएँ।",
+            "locale": "hi",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Todos alterados ao máximo: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्पष्ट DIC के अनुकूल (≥ 5)",
+            "locale": "hi",
+            "template": "documented-authored-570082b5f178a6cc39ac"
+          },
+          "note": {
+            "text": "मूल कारण का उपचार करें; स्कोर को प्रतिदिन दोहराएँ।",
+            "locale": "hi",
+            "template": "documented-authored-28597d6af57cc8be0b8a"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

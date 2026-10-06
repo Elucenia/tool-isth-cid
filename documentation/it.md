@@ -88,3 +88,28 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Non compatibile con CID manifesta (< 5)
+
+Suggerisce, ma non esclude, CID non manifesta: ripetere in 1 o 2 giorni.
+
+
+### 2
+
+Compatibile con CID manifesta (≥ 5)
+
+Trattare la causa di base; ripetere il punteggio quotidianamente.
+
+
+### 3
+
+Compatibile con CID manifesta (≥ 5)
+
+Trattare la causa di base; ripetere il punteggio quotidianamente.
+

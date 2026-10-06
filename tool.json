@@ -323,7 +323,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "ISTH/Taylor 2001:CIDmanifesta, plaquetas/PDF/TP/fibrinogênio, total 0–8",
-    "implementationVersion": "isth-cid@native-2026-10-04+5cb9bd005f09",
+    "implementationVersion": "isth-cid@native-2026-10-05+7b2cc692fc33",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/11816725/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -627,7 +627,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25",
+      "implementationHash": "7b2cc692fc33f887c1e038769698305ea440d772b933814f69061d391fe60913",
       "previousImplementationHash": "c39aa2b4625d9da1def6d9b988f56f93a0a34aec2db1c02e5b43f0873a98924f",
       "previousInputContract": {
         "fields": [
@@ -748,8 +748,34 @@
           "professionalLanguageApproval": "not-performed",
           "sourceRightsApproval": "not-performed",
           "scope": "Declarative technical rebinding only. Source access scope, source proofs and original failure/test histories remain unchanged."
+        },
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "isth-cid@native-2026-10-04+5cb9bd005f09",
+          "previousImplementationHash": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25",
+          "implementationHash": "7b2cc692fc33f887c1e038769698305ea440d772b933814f69061d391fe60913",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "2e73b5ffb743fb01bfd8373199483c5b18a88444a89f708c1402ec0ffe7b602d",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
         }
-      ]
+      ],
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      }
     },
     "limits": "Aplicar no contexto de doença de base compatível com CID, combinando dados clínicos e laboratoriais. O processo é dinâmico e requer repetição da avaliação. Um escore não comprova sozinho o diagnóstico; a precisão varia com a população e o estrato de pontuação.",
     "sourceLimitEvidence": {
@@ -769,20 +795,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/isth-cid/calculator.js",
-    "bytes": 4849,
-    "sha256": "5cb9bd005f0951279817ab4796262b1e67a8e342e181db28e871ed13a23bce25"
+    "bytes": 5054,
+    "sha256": "7b2cc692fc33f887c1e038769698305ea440d772b933814f69061d391fe60913"
   },
-  "sourceToolSha256": "f6cf279ef9bb9455d486bd821485f2991bc9fcacda035c8c507bec70080a9665",
+  "sourceToolSha256": "af60e1320ebf33016ea0ae9fec5ae6f39e9873e5b6e6eb70befc1789eb5b52f8",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "336cf0e1ffeaa927920bd9cbefb5b73868693d53b999676fcd2bb10178794fde",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "336cf0e1ffeaa927920bd9cbefb5b73868693d53b999676fcd2bb10178794fde",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

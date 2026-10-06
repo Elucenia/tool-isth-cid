@@ -88,3 +88,28 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Nicht vereinbar mit manifester DIC (< 5)
+
+Spricht für eine nicht manifeste DIC, schließt sie aber nicht aus: in 1 bis 2 Tagen wiederholen.
+
+
+### 2
+
+Vereinbar mit manifester DIC (≥ 5)
+
+Die Grunderkrankung behandeln; den Score täglich wiederholen.
+
+
+### 3
+
+Vereinbar mit manifester DIC (≥ 5)
+
+Die Grunderkrankung behandeln; den Score täglich wiederholen.
+
